@@ -1,0 +1,19 @@
+.lunch-schedule {
+  width: 100%;
+  height: 100%;
+}
+
+.lunch-schedule ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lunch-schedule hr {
+    width: 200px;
+    margin-left: 0;
+}
+
+.lunch-schedule .schedule-day {
+    float: left;
+    width: 100px;
+}

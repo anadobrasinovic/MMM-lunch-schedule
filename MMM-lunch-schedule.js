@@ -22,7 +22,7 @@ Module.register("MMM-lunch-schedule", {
     return ["MMM-lunch-schedule.css"];
   },
   start: function () {
-    var self = this;
+    const self = this;
 
     self.getData();
     setInterval(function () {
@@ -45,7 +45,7 @@ Module.register("MMM-lunch-schedule", {
     return wrapper;
   },
   socketNotificationReceived: function (notification, payload) {
-    var self = this;
+    const self = this;
 
     if (notification === "LUNCH_SCHEDULE") {
       self.displaySchedule(payload);
@@ -65,7 +65,7 @@ Module.register("MMM-lunch-schedule", {
   },
 
   createScheduleElement: function (schedule) {
-    var self = this;
+    const self = this;
     let listItem = document.createElement("li");
     let weekDay = self.getWeekDay(schedule["date"] * 1000) + " "; // seconds to milliseconds
     this.appendElement(listItem, weekDay, "schedule-day");

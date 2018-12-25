@@ -39,6 +39,7 @@ Module.register("MMM-lunch-schedule", {
     let hr = document.createElement("hr");
     let listRoot = document.createElement("ul");
     listRoot.setAttribute("id", "schedule-list");
+    wrapper.className = "bright medium";
     wrapper.innerHTML = self.config.HEADING;
     wrapper.appendChild(hr);
     wrapper.appendChild(listRoot);
@@ -68,8 +69,8 @@ Module.register("MMM-lunch-schedule", {
     const self = this;
     let listItem = document.createElement("li");
     let weekDay = self.getWeekDay(schedule["date"] * 1000) + " "; // seconds to milliseconds
-    this.appendElement(listItem, weekDay, "schedule-day");
-    this.appendElement(listItem, schedule["lunch"], "schedule-lunch");
+    this.appendElement(listItem, weekDay, "normal schedule-day");
+    this.appendElement(listItem, schedule["lunch"], "bright schedule-lunch");
     return listItem;
   },
 
